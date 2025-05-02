@@ -4,6 +4,7 @@ rec {
   filterByName = fn: filter (name: _: fn name);
   filterByValue = fn: filter (_: value: fn value);
 
+  names = lib.attrNames;
   values = lib.attrValues;
 
   map = lib.mapAttrs';
