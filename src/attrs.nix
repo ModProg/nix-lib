@@ -10,5 +10,6 @@ rec {
   entry = lib.nameValuePair;
   mapToValues = builtins.mapAttrs;
 
-  getOptional = attrs: key: if attrs ? key then attrs.${key} else null;
+  getOptional =  key: attrs: if attrs ? key then attrs.${key} else null;
+  getOptional' = attrs: key: getOptional key attrs;
 }
