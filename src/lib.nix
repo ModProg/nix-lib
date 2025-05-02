@@ -3,6 +3,7 @@ let
   inherit (builtins) isFunction;
   strings = mod ./strings.nix;
   attrs = mod ./attrs.nix;
+  lists = mod ./lists.nix;
   nix = mod ./nix.nix;
 in
 rec {

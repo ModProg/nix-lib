@@ -9,4 +9,6 @@ rec {
   map = lib.mapAttrs';
   entry = lib.nameValuePair;
   mapToValues = builtins.mapAttrs;
+
+  getOptional = attrs: key: if attrs ? key then attrs.${key} else null;
 }
