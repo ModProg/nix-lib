@@ -7,7 +7,7 @@ let
   nix = mod ./nix.nix;
 in
 rec {
-  inherit strings attrs;
+  inherit strings attrs lists;
   inherit (strings) startsWith;
   not = a: if isFunction a then (b: not (a b)) else !a;
   notNull = not isNull;
