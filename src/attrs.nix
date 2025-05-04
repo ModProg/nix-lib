@@ -12,6 +12,7 @@ rec {
   mapToValues = builtins.mapAttrs;
 
   hasKey = lib.hasAttr;
+  hasKey' = attrs: key: lib.hasAttr key attrs;
 
   getOptional = key: attrs: if hasKey key attrs then attrs.${key} else null;
   getOptional' = attrs: key: getOptional key attrs;

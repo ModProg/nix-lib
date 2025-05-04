@@ -8,6 +8,6 @@ rec {
       let
         value = fn elem;
       in
-      if value == null then acc else push acc elem
+      if value == null then acc else push acc value
     ) [ ];
 }
